@@ -14,15 +14,36 @@
 14. If credit card number has 16 digits, validate credit card number as Visa, Mastercard, or Discover.
 15. If credit card number has 15 digits, validate credit card number as American Express.
 
+What am I putting into the function?
+What am I getting out?
+Why am I doing it?
+
 Describe: doubleEveryOtherDigit()
 
-Test: "It should double every other digit starting after the second digit from left."
+Test: "It should double every other digit starting after the second digit from the left and return an array."
 Code:
 const creditCardNumber = "4102080860435620";
 doubleEveryOtherDigit(creditCardNumber);
-Expected Output: 4, 2, 0, 4, 0, 16, 0, 16, 6, 0, 8, 3, 10, 6, 4, 0;
+Expected Output: [4, 2, 0, 4, 0, 16, 0, 16, 6, 0, 4, 6, 5, 12, 2, 0];
 
-Test: "If the doubled digit is a double digit number, add together each digit of the double digit number."
+Describe: addDoubleDigitNumbersTogether()
+
+Test: "It should add the double digit numbers from an array together and return an array."
 Code:
-const addDoubleDigitNumbersTogether = ['16', '16', '10'];
-doubleEveryOtherDigit
+const creditCardNumberArray = [4, 2, 0, 4, 0, 16, 0, 16, 6, 0, 4, 6, 5, 12, 2, 0];
+addDoubleDigitNumbersTogether(creditCardNumberArray);
+Expected Output: [4, 2, 0, 4, 0, 7, 0, 7, 6, 0, 4, 6, 5, 3, 2, 0];
+
+Describe: creditCardValidator()
+
+Test: "It will return a string stating that the card number is not valid."
+Code:
+const creditCardNumber = "4102080880435620";
+creditCardValidator(creditCardNumber);
+Expected Output: "This card number is not valid."
+
+Test: "It will return a string stating that the card number is valid."
+Code:
+const creditCardNumber = "4102080860435620";
+creditCardValidator(creditCardNumber);
+Expected Output: "This card number is valid."
