@@ -64,12 +64,18 @@ Expected Output: "This card number is issued by Visa."
 
 Test: "It will check if the first digit of the credit card number is 5."
 Code:
-const creditCardNumber = "5102080860435620"
+const creditCardNumber = "5102080860435620";
 confirmCreditCardCompany(creditCardNumber);
 Expected Output: "This card number is issued by Mastercard."
 
 Test: "It will check if the first digit of the credit card number is 6."
 Code:
-const creditCardNumber = "6102080860435620"
+const creditCardNumber = "6102080860435620";
 confirmCreditCardCompany(creditCardNumber);
 Expected Output: "This card number is issued by Discover."
+
+Test: "It will return invalid if the first digit(s) are anything other than 34, 37, 4, 5, or 6."
+Code:
+const creditCardNumber = "7102080860435620";
+confirmCreditCardCompany(creditCardNumber);
+Expected Output: "This card number is invalid."
