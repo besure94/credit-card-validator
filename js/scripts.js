@@ -1,4 +1,8 @@
+// Valid credit card number:
 const creditCardNumber = "4102080860435620";
+
+// Invalid credit card number:
+// const creditCardNumber = "4102080880435620";
 // let creditCardNumberArray = [];
 
 // function doubleEveryOtherDigit(creditCardNumber) {
@@ -64,4 +68,22 @@ function creditCardValidator(creditCardNumber) {
 
 console.log("Sum of all digits: ", creditCardValidator(creditCardNumber));
 
+function confirmCreditCardCompany(creditCardNumber) {
+	let firstDigits = creditCardNumber[0];
+	const americanExpress = 34 || 37;
+	const visa = 4;
+	const mastercard = 5;
+	const discover = 6;
+	if (firstDigits === 34 || 37) {
+		return americanExpress;
+	} else if (firstDigits === 4) {
+		return visa;
+	} else if (firstDigits === 5) {
+		return mastercard;
+	} else if (firstDigits === 6) {
+		return discover;
+	}
+}
+
+console.log("Credit card company: ", confirmCreditCardCompany(creditCardNumber));
 // console.log("New credit card number: ", doubleEveryOtherDigit(creditCardNumber));
