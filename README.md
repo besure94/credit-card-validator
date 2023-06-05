@@ -79,3 +79,35 @@ Code:
 const creditCardNumber = "7102080860435620";
 confirmCreditCardCompany(creditCardNumber);
 Expected Output: "This card number is invalid."
+
+Describe: validateCreditCardNumberLength()
+
+Test: "It will check if the length of the credit card number is 16 digits and starts with 4."
+Code:
+const creditCardNumber = "4102080860435620";
+validateCreditCardNumberLength(creditCardNumber);
+Expected Output: "This card number is issued by Visa."
+
+Test: "It will check if the length of the credit card number is 16 digits and starts with 5."
+Code:
+const creditCardNumber = "5102080860435620";
+validateCreditCardNumberLength(creditCardNumber);
+Expected Output: "This card number is issued by Mastercard."
+
+Test: "It will check if the length of the credit card number is 16 digits and starts with 6."
+Code:
+const creditCardNumber = "6102080860435620";
+validateCreditCardNumberLength(creditCardNumber);
+Expected Output: "This card number is issued by Discover."
+
+Test: "It will check if the length of the credit card number is 15 digits and starts with 34 or 37."
+Code:
+const creditCardNumber = "342080860435620";
+validateCreditCardNumberLength(creditCardNumber);
+Expected Output: "This card number is issued by American Express."
+
+Test: "It will return invalid if the length of the credit card is less than 15 digits, or 17 digits or more."
+Code:
+const creditCardNumber = "702080860435620";
+validateCreditCardNumberLength(creditCardNumber);
+Expected Output: "This card number is invalid."
