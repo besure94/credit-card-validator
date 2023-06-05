@@ -1,17 +1,14 @@
 // Valid credit card number (Visa):
-const creditCardNumber = "4102080860435620";
-
-// Invalid credit card number:
-// const creditCardNumber = "4102080880435620";
+// const creditCardNumber = "4102080860435620";
 
 // American Express card number:
-// const creditCardNumber = "3402080860435620";
+// const creditCardNumber = "342080860435620";
 
 // Mastercard card number:
 // const creditCardNumber = "5102080860435620";
 
 // Discover card number:
-// const creditCardNumber = "6102080860435620";
+const creditCardNumber = "6102080860435620";
 
 // Invalid card number:
 // const creditCardNumber = "7102080860435620";
@@ -84,20 +81,20 @@ console.log("Sum of all digits: ", creditCardValidator(creditCardNumber));
 function confirmCreditCardCompany(creditCardNumber) {
 	let firstDigit = parseInt(creditCardNumber[0]);
 	let firstTwoDigits = parseInt(creditCardNumber[0] + creditCardNumber[1]);
+	let creditCardNumberLength = parseInt(creditCardNumber.length);
 
-	if (firstTwoDigits === 34 || firstTwoDigits === 37) {
+	if (firstTwoDigits === 34 || firstTwoDigits === 37 && creditCardNumberLength === 15) {
 		return "This credit card number is issued by American Express.";
-	} else if (firstDigit === 4) {
+	} else if (firstDigit === 4 && creditCardNumberLength === 16) {
 		return "This credit card number is issued by Visa.";
-	} else if (firstDigit === 5) {
+	} else if (firstDigit === 5 && creditCardNumberLength === 16) {
 		return "This credit card number is issued by Mastercard.";
-	} else if (firstDigit === 6) {
+	} else if (firstDigit === 6 && creditCardNumberLength === 16) {
 		return "This credit card number is issued by Discover.";
 	} else {
 		return "This credit card number is invalid."
 	}
 }
-
 
 console.log("Credit card company: ", confirmCreditCardCompany(creditCardNumber));
 // console.log("New credit card number: ", doubleEveryOtherDigit(creditCardNumber));
