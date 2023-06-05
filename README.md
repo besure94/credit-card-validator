@@ -47,3 +47,29 @@ Code:
 const creditCardNumber = "4102080860435620";
 creditCardValidator(creditCardNumber);
 Expected Output: "This card number is valid."
+
+Describe: confirmCreditCardCompany()
+
+Test: "It will check if the first digits of the credit card number are 34 or 37."
+Code:
+const creditCardNumber = "3402080860435620";
+confirmCreditCardCompany(creditCardNumber);
+Expected Output: "This card number is issued by American Express."
+
+Test: "It will check if the first digit of the credit card number is 4."
+Code:
+const creditCardNumber = "4102080860435620";
+confirmCreditCardCompany(creditCardNumber);
+Expected Output: "This card number is issued by Visa."
+
+Test: "It will check if the first digit of the credit card number is 5."
+Code:
+const creditCardNumber = "5102080860435620"
+confirmCreditCardCompany(creditCardNumber);
+Expected Output: "This card number is issued by Mastercard."
+
+Test: "It will check if the first digit of the credit card number is 6."
+Code:
+const creditCardNumber = "6102080860435620"
+confirmCreditCardCompany(creditCardNumber);
+Expected Output: "This card number is issued by Discover."
