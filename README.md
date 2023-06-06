@@ -48,6 +48,21 @@ const creditCardNumber = "4102080860435620";
 creditCardValidator(creditCardNumber);
 Expected Output: "This card number is valid."
 
+Describe: validateBySumFinalDigit()
+
+Test: "It will return a string stating that the card number is not valid because its last digit is not 0."
+Code:
+const sumToCheck = 52;
+validateBySumFinalDigit(sumToCheck);
+Expected Output: "This card number is not valid."
+
+Test: "It will return a string stating that the card number is valid because its last digit is 0."
+Code:
+const sumToCheck = 50;
+validateBySumFinalDigit(sumToCheck);
+Expected Output: "This card number is valid."
+
+
 Describe: confirmCreditCardCompany()
 
 Test: "It will check if the first digits of the credit card number are 34 or 37."
