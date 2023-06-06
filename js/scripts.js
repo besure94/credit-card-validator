@@ -63,20 +63,28 @@ function addDoubleDigitNumbersTogether(doubledCreditCardNumberArray) {
 
 console.log("New credit card number: ", addDoubleDigitNumbersTogether(doubleEveryOtherDigit(creditCardNumber)));
 
+function validateBySumFinalDigit(sumToCheck) {
+	let sumString = sumToCheck.toString();
+	let sumStringLength = sumString.length;
+	if (sumString[sumStringLength -1] == 0) {
+		return "This card number is valid."
+	} else {
+		return "This card number is not valid."
+	}
+}
+
 function creditCardValidator(creditCardNumber) {
 	let doubleDigitArray = doubleEveryOtherDigit(creditCardNumber);
 	let finalDoubleDigitArray = addDoubleDigitNumbersTogether(doubleDigitArray);
 	let sumOfAllDigits = 0;
 	for (let index = 0; index < finalDoubleDigitArray.length; index++) {
 		sumOfAllDigits += finalDoubleDigitArray[index];
-		console.log("Number: ", finalDoubleDigitArray[index]);
-		console.log("Sum: ", sumOfAllDigits);
-		console.log("------------");
 	}
-	return sumOfAllDigits;
+	let result = validateBySumFinalDigit(sumOfAllDigits);
+	return result;
 }
 
-console.log("Sum of all digits: ", creditCardValidator(creditCardNumber));
+console.log("Credit card validator: ", creditCardValidator(creditCardNumber));
 
 function confirmCreditCardCompany(creditCardNumber) {
 	let firstDigit = parseInt(creditCardNumber[0]);
