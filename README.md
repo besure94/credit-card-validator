@@ -1,3 +1,16 @@
+## Credit Card Validator
+
+By Brian Scherner
+
+#### An application that validates credit card numbers.
+
+## Technologies Used
+
+* Javascript
+* Markdown
+
+### Tests
+
 1. Take in a credit card number as a string from the user.
 2. Starting on the second digit from left side and moving right, double every other digit.
 3. Check if the result of the doubled digit is a double digit number.
