@@ -9,6 +9,26 @@ By Brian Scherner
 * Javascript
 * Markdown
 
+## Description
+
+This application takes a credit card number from the user and then validates the credit card based on the Luhn algorithm. If it passes the Luhn algorithm, the credit card number must also be a certain number of digits, and start with a certain digit to confirm which company issued the card.
+
+## Setup/Installation Requirements
+
+* Clone this repository to your desktop.
+* Navigate to the JS folder of the directory.
+* Open js/scripts.js in your browser.
+
+## Known Bugs
+
+The application does not have a user interface yet. I plan to add a user interface later.
+
+## License
+
+MIT
+
+Copyright (c) 2023 Brian Scherner
+
 ### Tests
 
 1. Take in a credit card number as a string from the user.
